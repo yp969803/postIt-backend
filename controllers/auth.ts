@@ -15,6 +15,16 @@ const signUpUserController = async ({
   try {
     const { name, email, password,imageUrl }: CreateUserInput = await request.body()
       .value;
+      const isUser = await User.findOne({ email: email });
+
+      if (isUser) {
+        response.status = 401;
+        response.body = {
+          status: 'fail',
+          message: 'User with this emailId already exists',
+        };
+        return;
+      }
 
     const hashedPassword = await hashPassword(password);
     const createdAt = new Date();
