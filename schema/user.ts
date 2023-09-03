@@ -44,7 +44,7 @@ export const updateUserProfileSchema=z.object({
 
 const params = {
   params: z.object({
-    userEmail: z.string(),
+    email: z.string(),
   }),
 };
 
