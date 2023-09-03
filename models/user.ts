@@ -6,6 +6,7 @@ interface UserSchema {
   name: string;
   email: string;
   role: string;
+  imageUrl:string;
   verified: boolean;
   password: string;
   createdAt: Date;

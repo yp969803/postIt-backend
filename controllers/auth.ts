@@ -13,7 +13,7 @@ const signUpUserController = async ({
   response,
 }: RouterContext<string>) => {
   try {
-    const { name, email, password }: CreateUserInput = await request.body()
+    const { name, email, password,imageUrl }: CreateUserInput = await request.body()
       .value;
 
     const hashedPassword = await hashPassword(password);
@@ -24,6 +24,7 @@ const signUpUserController = async ({
       name,
       email,
       password: hashedPassword,
+      imageUrl,
       role: "user",
       verified: true,
       createdAt,
