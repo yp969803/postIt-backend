@@ -1,0 +1,224 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "stickyNotes",
+    "dateExported": "2023-09-03T19:05:02.886Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "bbaea1e4-850a-4efb-8bee-32528443ee56",
+            "name": "auth",
+            "containerId": "",
+            "created": "2023-09-03T11:15:50.871Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "fb98f208-6cc8-498c-956e-a79254c06947",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-09-03T11:20:40.551Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "0b3f8c45-19e5-4f5f-807a-63941289b046",
+            "name": "notes",
+            "containerId": "",
+            "created": "2023-09-03T18:38:00.521Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d8d2bda8-aa3b-4a7d-abaa-79c66a101667",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "bbaea1e4-850a-4efb-8bee-32528443ee56",
+            "name": "signup",
+            "url": "localhost:8000/api/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-09-03T11:16:00.272Z",
+            "modified": "2023-09-03T12:24:10.271Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"yash@gmail.com\",\n  \"name\":\"sudo\",\n  \n  \"password\":\"12345678\",\n  \"imageUrl\":\"http://localhost:8000\",\n  \"passwordConfirm\":\"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7d03383b-f9d4-448a-a452-033769d9ac48",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "bbaea1e4-850a-4efb-8bee-32528443ee56",
+            "name": "login",
+            "url": "localhost:8000/api/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-03T11:18:56.283Z",
+            "modified": "2023-09-03T12:24:23.376Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"yash@gmail.com\",\n  \"password\":\"12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8bcce01b-5271-42fb-9b38-f7001d3d50f9",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "fb98f208-6cc8-498c-956e-a79254c06947",
+            "name": "me",
+            "url": "localhost:8000/api/users/me",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-09-03T11:20:48.360Z",
+            "modified": "2023-09-03T11:21:06.190Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "395ada9b-f522-4730-b32d-c851d480b7c3",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "bbaea1e4-850a-4efb-8bee-32528443ee56",
+            "name": "logout",
+            "url": "localhost:8000/api/auth/logout",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-09-03T11:22:50.062Z",
+            "modified": "2023-09-03T11:23:05.861Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ce09f050-8838-4053-a623-bb799f7606b7",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "fb98f208-6cc8-498c-956e-a79254c06947",
+            "name": "getUserProfile",
+            "url": "localhost:8000/api/users/getUser/yash@gmail.com",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-09-03T18:26:23.612Z",
+            "modified": "2023-09-03T18:27:34.733Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1f1d7529-73ea-4e90-bb25-339bbd80461d",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "fb98f208-6cc8-498c-956e-a79254c06947",
+            "name": "pay",
+            "url": "localhost:8000/api/users/pay",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-09-03T18:30:51.137Z",
+            "modified": "2023-09-03T18:34:06.499Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b6e73ae5-b69e-4445-8d2e-f7a89a0acdd0",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "fb98f208-6cc8-498c-956e-a79254c06947",
+            "name": "updateProfile",
+            "url": "localhost:8000/api/users/updateProfile",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-09-03T18:34:49.277Z",
+            "modified": "2023-09-03T18:37:28.897Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Yash Patel\",\n  \"imageUrl\":\"http://hello.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6e1158c4-4efb-4844-b915-02106ce349eb",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "0b3f8c45-19e5-4f5f-807a-63941289b046",
+            "name": "createNote",
+            "url": "localhost:8000/api/notes/create",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-09-03T18:38:23.317Z",
+            "modified": "2023-09-03T18:46:17.004Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"Devops and cloud\",\n  \"description\":\"devops is not a role it is set of practices\",\n  \"tags\":\"devops cloud aws\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "81fc05cf-07bd-4648-b824-49d87a85746d",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "0b3f8c45-19e5-4f5f-807a-63941289b046",
+            "name": "updateNote",
+            "url": "localhost:8000/api/notes/update/64f4d312d7222423375f9ac8",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2023-09-03T18:40:42.103Z",
+            "modified": "2023-09-03T19:03:48.079Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"Devops\",\n  \"description\":\"devops is not a role it is set of practices\",\n  \"tags\":\"devops cloud aws ansible terraform\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d5eefc2f-5f1f-43fd-a3c2-2a4cb56052aa",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "0b3f8c45-19e5-4f5f-807a-63941289b046",
+            "name": "getAllNotes",
+            "url": "localhost:8000/api/notes/getAll/yash@gmail.com",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-09-03T18:54:37.030Z",
+            "modified": "2023-09-03T18:54:58.555Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e39016f0-3c37-4af8-96ff-9326f9db6ffa",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "0b3f8c45-19e5-4f5f-807a-63941289b046",
+            "name": "getnote",
+            "url": "localhost:8000/api/notes/get/64f4d478d7222423375f9aca",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-09-03T18:58:14.536Z",
+            "modified": "2023-09-03T18:58:38.690Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9385b81d-2220-4cb8-a5a0-816969c3954c",
+            "colId": "c8a3c118-559b-41fe-99c4-b919dc11743a",
+            "containerId": "0b3f8c45-19e5-4f5f-807a-63941289b046",
+            "name": "deletenote",
+            "url": "localhost:8000/api/notes/delete/64f4d478d7222423375f9aca",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2023-09-03T18:58:56.802Z",
+            "modified": "2023-09-03T18:59:27.736Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

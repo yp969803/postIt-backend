@@ -34,6 +34,25 @@ const getMeController = async ({ state, response }: RouterContext<string>) => {
 
 const pay=async({state,response}:RouterContext<string>)=>{
   try{
+    const use_r = await User.findOne({ _id: state.userId });
+
+    if (!use_r) {
+      response.status = 401;
+      response.body = {
+        status: 'fail',
+        message: 'The user belonging to this token no longer exists',
+      };
+      return;
+    }
+    if(use_r.verified==true){
+      response.status = 401;
+      response.body = {
+        status: 'fail',
+        message: 'You have already paid the verification fees',
+      };
+      return;
+    }
+    
     const user=await User.updateOne(
       {_id: state.userId},
       { $set: {  verified: true } },

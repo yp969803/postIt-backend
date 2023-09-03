@@ -85,9 +85,10 @@ const updateController = async (
       };
       return;
     }
+   
 
     const updatedInfo = await Note.updateOne(
-      { _id: new Bson.ObjectId(params.todoId), email: user.email },
+      { _id: new Bson.ObjectId(params.noteId),email:user.email },
       {
         $set: {
           title: title,
@@ -99,6 +100,7 @@ const updateController = async (
       },
       { ignoreUndefined: true },
     );
+   console.log(updatedInfo)
     if (!updatedInfo.matchedCount) {
       response.status = 404;
       response.body = {
@@ -154,6 +156,11 @@ const deleteController = async ({
         message:
           "No note with that Id exists or only the creator of note can delete this note",
       };
+      response.status = 200;
+    response.body = {
+      status: "success",
+      data: "Note with this id deleted",
+    };
       return;
     }
 
