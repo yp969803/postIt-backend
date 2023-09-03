@@ -7,6 +7,9 @@ export const createUserSchema = z.object({
       email: z
         .string({ required_error: "Email is required" })
         .email("Invalid email"),
+        imageUrl: z
+        .string({ required_error: "UserImage is required" })
+        .email("Invalid image"),
       password: z
         .string({ required_error: "Password is required" })
         .min(8, "Password must be more than 8 characters")
@@ -32,5 +35,25 @@ export const loginUserSchema = z.object({
   }),
 });
 
+export const updateUserProfileSchema=z.object({
+  body: z.object({
+    name: z.string({required_error: "Name is required"}),
+    imageUrl: z.string({required_error:"Image is required"})
+  }).partial()
+})
+
+const params = {
+  params: z.object({
+    userEmail: z.string(),
+  }),
+};
+
+export const getUserSchema=z.object({
+  ...params
+})
+
+
 export type CreateUserInput = z.TypeOf<typeof createUserSchema>["body"];
 export type LoginUserInput = z.TypeOf<typeof loginUserSchema>["body"];
+export type UpdateUserProfile= z.TypeOf<typeof updateUserProfileSchema>["body"];
+export type GetUser=z.TypeOf<typeof getUserSchema>["params"]
