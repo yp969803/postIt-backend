@@ -54,6 +54,7 @@ const signUpUserController = async ({
       status: "success",
       user: omitFields(user, "password", "verified"),
     };
+    return
   } catch (error) {
     if((error.message as string).includes("E11000")){
       response.status = 409;
