@@ -54,5 +54,7 @@ Prerequisite
 # run:
 
 deno run --allow-net --allow-read --allow-write --allow-env server.ts
+
+# use the thunderClient file to get the api collections for testing
   ```
     
