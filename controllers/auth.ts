@@ -36,7 +36,7 @@ const signUpUserController = async ({
       password: hashedPassword,
       imageUrl,
       role: "user",
-      verified: true,
+      verified: false,
       createdAt,
       updatedAt,
     });
