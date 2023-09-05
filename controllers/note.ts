@@ -214,4 +214,19 @@ const getAllController = async (
   }
 };
 
-export default { getController,createController,updateController,deleteController,getAllController };
+const getAllNotesController=async({response}:RouterContext<string>)=>{
+  try{
+    const all_notes=await Note.find().toArray();
+    response.status=200;
+    response.body={
+      status:"success",
+      data: {all_notes}
+    };
+    return;
+  }catch(error){
+    response.status=500;
+    response.body={status:"error",message:error.message}
+  }
+}
+
+export default { getController,createController,updateController,deleteController,getAllController,getAllNotesController };

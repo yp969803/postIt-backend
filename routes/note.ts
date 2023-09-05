@@ -10,4 +10,5 @@ router.put<string>("/update/:noteId",validate(updateNoteSchema),requireUser,note
 router.delete<string>("/delete/:noteId",requireUser,validate(deleteNoteSchema),noteController.deleteController);
 router.get<string>("/get/:noteId",requireUser,validate(getNoteSchema),noteController.getController)
 router.get<string>("/getAll/:email",requireUser,validate(getAllNotesSchema),noteController.getAllController)
+router.get<string>("/getAll",requireUser,noteController.getAllNotesController);
 export default router;
